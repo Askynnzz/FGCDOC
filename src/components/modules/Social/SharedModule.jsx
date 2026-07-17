@@ -109,7 +109,7 @@ export default function SharedModule() {
         <SectionHeader
           tag="Outil Social"
           title="Créateur de Syllabus"
-          subtitle="Génère une liste de concepts spécifiques à étudier et envoie le lien à ton Sparring Partner."
+          subtitle="Génère un lien contenant une liste de concepts spécifiques à étudier ."
           color="pink"
         />
 
@@ -119,7 +119,7 @@ export default function SharedModule() {
               <h3 className="font-display text-chalk text-xl mb-4">1. Nomme ton Syllabus</h3>
               <input 
                 type="text" 
-                placeholder="Ex: Programme Anti-Ken"
+                placeholder="Ex: Programme défense"
                 value={title}
                 onChange={e => setTitle(e.target.value)}
                 className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-chalk placeholder:text-stone font-body focus:outline-none focus:border-sf-pink/50 transition-colors"
