@@ -137,7 +137,7 @@ export default function HomePage() {
         {/* ── Vidéo de fond (YouTube) ── */}
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden bg-[#F4EBE1]">
           <iframe 
-            src={`https://www.youtube.com/embed/CqI3HWB7CM4?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=RtcZ0D-577Q&playsinline=1`}
+            src={`https://www.youtube.com/embed/CqI3HWB7CM4?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=CqI3HWB7CM4&playsinline=1`}
             title="FGC Background" 
             frameBorder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
