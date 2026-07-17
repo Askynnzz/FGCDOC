@@ -168,7 +168,7 @@ export default function LabModule() {
                 <DriveGauge value={gauge} burnout={burnout} />
                 {burnout && (
                   <div className="mt-4 p-3 rounded-xl bg-sf-pink/10 border border-sf-pink/30">
-                    <p className="text-sf-pink text-xs"><strong>BURNOUT</strong> — tu prends des dégâts même en bloquant, et tes specials sont plus lents.</p>
+                    <p className="text-sf-pink text-xs"><strong>BURNOUT</strong> — tu prends des dégâts même en bloquant les specials et tu n'as plus accès au drive.</p>
                   </div>
                 )}
               </div>
