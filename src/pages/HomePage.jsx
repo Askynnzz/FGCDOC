@@ -134,17 +134,16 @@ export default function HomePage() {
       ══════════════════════════════════════ */}
       <section className="hero-bg relative overflow-hidden pt-28 pb-12 sm:pb-20 px-4 sm:px-6 min-h-[88vh] flex items-center">
         
-        {/* ── Vidéo de fond ── */}
-        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-          <video 
-            src="/videos/fgc_montage.mp4" 
-            autoPlay 
-            loop 
-            muted 
-            playsInline
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover opacity-[0.12] mix-blend-multiply"
+        {/* ── Vidéo de fond (YouTube) ── */}
+        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden bg-[#F4EBE1]">
+          <iframe 
+            src={`https://www.youtube.com/embed/CqI3HWB7CM4?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=RtcZ0D-577Q&playsinline=1`}
+            title="FGC Background" 
+            frameBorder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            className="absolute top-1/2 left-1/2 w-[300vw] h-[300vh] md:w-[150vw] md:h-[150vh] max-w-none -translate-x-1/2 -translate-y-1/2 opacity-[0.12] mix-blend-multiply pointer-events-none"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#F4EBE1] via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#F4EBE1] via-[#F4EBE1]/40 to-transparent pointer-events-none" />
         </div>
 
         {/* ── Éléments de peinture (Z-10) ── */}
