@@ -1,0 +1,108 @@
+{
+  "characters": [
+    {
+      "id": "mai",
+      "name": "Mai Shiranui",
+      "archetype": "Broken smr shoto rushdown zoning elle fait tout au nom",
+      "color": "pink",
+      "portrait": "/images/characters/mai_portrait.jpg",
+      "supercomboUrl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Mai",
+      "description": "Personnage DLC invité de Fatal Fury . Mai excelle dans le harcèlement à moyenne distance avec son éventail (Kachousen) et ses angles d'attaque mortels venus des airs du sol eh partout frère. Elle possède une mobilité extrême qui lui permet de forcer l'erreur adverse en l'oppressant.",
+      "neutralPokes": [
+        {
+          "name": "Debout Moyen Pied (st.MK)",
+          "classic": "MK",
+          "modern": "M",
+          "desc": "Son poke principal. Excellente portée, idéal pour tenir l'adversaire à distance et whiff punish.",
+          "image": "/images/characters/mai_mk.png"
+        },
+        {
+          "name": "Bas Lourd Poing (cr.HP)",
+          "classic": "↓+HP",
+          "modern": "Bas H",
+          "desc": "Un anti-air très solide et un bon outil pour déclencher de lourds combos.",
+          "image": "/images/characters/mai_hp.png"
+        }
+      ],
+      "gameplan": [
+        {
+          "step": "1",
+          "text": "Garde l'adversaire à distance avec le Kachousen (↓↘→+P / Neutre+S) pour le forcer à sauter ou à dasher.",
+          "image": "/images/characters/mai_kachousen.png"
+        },
+        {
+          "step": "2",
+          "text": "Punis ses tentatives d'approche avec tes excellents normaux (st.MK, cr.HP) ou un anti-air Ryuenbu."
+        },
+        {
+          "step": "3",
+          "text": "Quand tu as conditionné l'adversaire à rester immobile, utilise ta vitesse (Drive Rush, saut divekick) pour entrer au corps-à-corps et appliquer ton mix-up."
+        }
+      ],
+      "modernNote": "Mai en Moderne garde l'accès facile à son Ryuenbu (anti-air) via S, ce qui renforce considérablement sa défense de zonage. Cependant, elle perd quelques options de pokes longs, rendant son jeu au sol un peu plus prévisible.",
+      "videoGuides": [
+        {
+          "id": "H4m0P2YBAjM", 
+          "title": "Mai Shiranui - Guide complet"
+        },
+        {
+          "id": "9sRgVVnR2v4",
+          "title": "Mai moderne tips bref"
+        }
+      ]
+    },
+    {
+      "id": "ingrid",
+      "name": "Ingrid",
+      "archetype": "Zoner",
+      "color": "blue",
+      "portrait": "/images/characters/ingrid_portrait.jpg",
+      "supercomboUrl": "https://wiki.supercombo.gg/w/Street_Fighter_6/Ingrid",
+      "description": "Personnage DLC. Ingrid est une zoneuse aux dégâts démesurés qui abuse de ses projectiles et de sa mobilité. Son gameplay repose sur le conditionnement : forcer l'adversaire à respecter ses pièges pour ouvrir sa garde.",
+      "neutralPokes": [
+        {
+          "name": "Soleil Lointain (st.HP)",
+          "classic": "HP",
+          "modern": "H",
+          "desc": "Un coup lourd qui génère un anneau d'énergie devant elle. Très bon pour le counter-poke, mais recovery longue.",
+          "image": "/images/characters/ingrid_hp.png"
+        },
+        {
+          "name": "Coup de pied Lunaire (cr.MK)",
+          "classic": "↓+MK",
+          "modern": "Bas M",
+          "desc": "Son low rapide classique. Permet de cancel dans son Sunburst (projectile) pour sécuriser son approche."
+        }
+      ],
+      "gameplan": [
+        {
+          "step": "1",
+          "text": "Abuser des projectiles à bonne distance pour restreindre les mouvements de l'adversaire aux sauts et parry et pouvoir recharger ses."
+        },
+        {
+          "step": "2",
+          "text": "Utiliser la téléportation pour se replacer ou attaquer et se servir du drive rush pour mixer ses options et opter pour un gameplay plus agressif au delà des projectiles."
+        },
+        {
+          "step": "3",
+          "text": "Profiter des réactions adverses pour punir via anti air et lourds combo avec le Super Art 2."
+        }
+      ],
+      "modernNote": "En Mode Moderne : aucune différence particulière si ce n'est les dégâts en moins et l'accès restreint à certains boutons.",
+      "videoGuides": [
+        {
+          "id": "hhzMIoaLFE0",
+          "title": "Ingrid - Tips important"
+        },
+        {
+          "id": "Wd_3gCOji3o",
+          "title": "Ingrid - Moderne"
+        },
+        {
+          "id": "BJqPSzQwzpM",
+          "title": "Ingrid - Guide complet"
+        }
+      ]
+    }
+  ]
+}

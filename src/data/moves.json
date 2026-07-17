@@ -1,0 +1,79 @@
+{
+  "moves": [
+    {
+      "id": "ryu_cr_mk",
+      "character": "Ryu",
+      "name": "Accroupi Moyen Kick",
+      "notation": "↓+MK (ou Bas M)",
+      "startup": 8,
+      "active": 3,
+      "recovery": 14,
+      "onBlock": -6,
+      "onHit": 2,
+      "description": "Le classique poke de Ryu. Pas le plus safe, mais il touche loin.",
+      "color": "yellow"
+    },
+    {
+      "id": "ryu_st_hp",
+      "character": "Ryu",
+      "name": "Debout Gros Poing",
+      "notation": "HP (ou H)",
+      "startup": 7,
+      "active": 4,
+      "recovery": 19,
+      "onBlock": -4,
+      "onHit": 5,
+      "description": "Un coup de poing lourd avec une bonne hitbox. Mais attention à la longue recovery si il manque.",
+      "color": "orange"
+    },
+    {
+      "id": "luke_cr_lk",
+      "character": "Luke",
+      "name": "Accroupi Léger Kick",
+      "notation": "↓+LK (ou Bas L)",
+      "startup": 4,
+      "active": 2,
+      "recovery": 8,
+      "onBlock": -1,
+      "onHit": 3,
+      "description": "Un des coups les plus rapides du jeu. Quasi safe, confirme en combo.",
+      "color": "green"
+    },
+    {
+      "id": "cammy_dp",
+      "character": "Cammy",
+      "name": "Cannon Spike",
+      "notation": "→↓↘+K (ou ➔+S)",
+      "startup": 5,
+      "active": 2,
+      "recovery": 30,
+      "onBlock": -26,
+      "onHit": "KD",
+      "description": "L'anti-air de Cammy.",
+      "color": "pink"
+    },
+    {
+      "id": "jp_lp",
+      "character": "JP",
+      "name": "Debout Léger Poing",
+      "notation": "LP (ou L)",
+      "startup": 5,
+      "active": 3,
+      "recovery": 9,
+      "onBlock": 2,
+      "onHit": 5,
+      "description": "L'un des meilleurs jabs du jeu. +2 au blocage",
+      "color": "blue"
+    }
+  ],
+  "opponents": [
+    {
+      "id": "shimmy_target",
+      "name": "Adversaire",
+      "grabStartup": 5,
+      "jabStartup": 4,
+      "description": "Un personnage générique pour les simulations",
+      "color": "pink"
+    }
+  ]
+}

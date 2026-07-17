@@ -1,0 +1,84 @@
+{
+  "scenarios": [
+    {
+      "id": "jump_in",
+      "title": "L'adversaire saute avec un Gros Poing",
+      "icon": "✈️",
+      "situation": "Tu es au sol. L'adversaire saute et se jette sur toi avec son poing le plus fort. Tu as une fraction de seconde.",
+      "root": {
+        "id": "root",
+        "situation": "Adversaire en l'air, Jump-in Gros Poing",
+        "emoji": "👊",
+        "choices": [
+          {
+            "id": "block",
+            "label": "Je bloque 🛡️",
+            "outcome": "neutral",
+            "resultTitle": "Tu te défends... mais c'est tout.",
+            "resultText": "Tu absorbes le coup en bloquant. Pas de dégâts, mais il atterrit avec l'avantage. La pression continue. Tu survives, mais c'est lui qui dicte.",
+            "lesson": "Bloquer n'est pas une erreur, mais c'est réactif. Il faut trouver mieux.",
+            "children": []
+          },
+          {
+            "id": "antiair",
+            "label": "Anti-Air ! ⚡",
+            "outcome": "win",
+            "resultTitle": "Tu coupes son envol !",
+            "resultText": "Tu sors ton DP (Shoryuken ou équivalent) ou un uppercut neutre. Il se prend le coup dans les airs. Il retombe, tu gagnes l'échange et tu récupères l'avantage.",
+            "lesson": "L'anti-air est LE contre au jump-in. Ça s'apprend et ça se récompense toujours.",
+            "children": []
+          },
+          {
+            "id": "too_late",
+            "label": "Je recule trop tard 😅",
+            "outcome": "lose",
+            "resultTitle": "Tu te fais avoir !",
+            "resultText": "Tu as tenté de reculer mais tu étais dans sa hitbox. Plein combo. La prochaine fois, il faudra réagir plus tôt ou trouver une option proactive.",
+            "lesson": "Face à un saut répété, le recul réactif ne suffit pas. Prends l'initiative avec un anti-air.",
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "grab_situation",
+      "title": "Tu es en blocage et l'adversaire mixe",
+      "icon": "🎯",
+      "situation": "Tu bloquais pendant sa blockstring. Il s'arrête. Que fait-il ? Chope ou coup ?",
+      "root": {
+        "id": "root",
+        "situation": "Fin de blockstring. Il marque une pause.",
+        "emoji": "🤔",
+        "choices": [
+          {
+            "id": "tech_grab",
+            "label": "Je tech la chope 🤜🤛",
+            "outcome": "neutral",
+            "resultTitle": "Chope techée ! Retour au neutre.",
+            "resultText": "Tu as anticipé la chope et tu l'as counter. L'échange est rompu. Les deux joueurs reviennent en position neutre. Bonne lecture !",
+            "lesson": "Tech-er une chope demande d'anticiper le timing. Entraîne-toi dans les modes d'entraînement.",
+            "children": []
+          },
+          {
+            "id": "mash_dp",
+            "label": "Je mash un Reversal 💥",
+            "outcome": "neutral",
+            "resultTitle": "Reversal ! Mais est-ce safe ?",
+            "resultText": "Tu coupes avec un DP. Si ton adversaire avait continué son blockstring, tu t'es fait punir. Si il faisait une chope, tu l'as battu. Le jeu de la menace mutuelle.",
+            "lesson": "Les Reversals sont puissants mais risqués. À utiliser avec parcimonie pour rester imprévisible.",
+            "children": []
+          },
+          {
+            "id": "wait_block",
+            "label": "Je continue à bloquer 🧱",
+            "outcome": "lose",
+            "resultTitle": "Il te chope !",
+            "resultText": "Tu es resté en position de blocage et il a tenté la chope. Tu te fais attraper. Damage et corner potential. Il faut tech ou sortir.",
+            "lesson": "Bloquer en boucle est prévisible. Introduire des techs et des options te rend plus difficile à lire.",
+            "children": []
+          }
+        ]
+      }
+    }
+  ]
+}

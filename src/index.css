@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&family=Shojumaru&family=Permanent+Marker&family=Zhi+Mang+Xing&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    @apply bg-bg-primary text-chalk font-body;
+    background-image: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 80%);
+    min-height: 100vh;
+  }
+
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: #110E0C; }
+  ::-webkit-scrollbar-thumb {
+    background: #9E2A2B;
+    border-radius: 4px;
+  }
+}
+
+@layer utilities {
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer components {
+
+  /* ============================================================
+     LE LIVRE (Conteneur central)
+  ============================================================ */
+  .book-container {
+    @apply w-full max-w-5xl mx-auto min-h-screen relative overflow-hidden;
+    background-color: #F4EBE1;
+    background-image: 
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
+    /* Effet 3D : Grosse ombre au sol + tranches de pages multiples à droite + reliure creusée à gauche */
+    box-shadow: 
+      0 30px 80px rgba(0,0,0,1), 
+      12px 0 0 -3px #D1C4B5, 
+      24px 0 0 -8px #BBAA96, 
+      inset 40px 0 60px rgba(0,0,0,0.15);
+    border-left: 2px solid rgba(26,24,21,0.2);
+    transform-origin: left center;
+  }
+
+  /* ============================================================
+     GRAFFITI & RANSOM TITLE (P5 Style)
+  ============================================================ */
+  .graffiti-title {
+    @apply font-display tracking-wider uppercase leading-none;
+    text-shadow: 2px 2px 0px rgba(158,42,43,0.3);
+  }
+
+  .ransom-title {
+    @apply font-display tracking-widest uppercase leading-none;
+    text-shadow: 
+      3px 3px 0px #1A1815,
+      4px 4px 0px #1A1815,
+      5px 5px 0px #1A1815;
+    transform: rotate(-2deg);
+  }
+
+  .graffiti-yellow  { @apply graffiti-title text-sf-yellow; }
+  .graffiti-green   { @apply graffiti-title text-sf-green;  }
+  .graffiti-pink    { @apply graffiti-title text-sf-pink;   }
+  .graffiti-blue    { @apply graffiti-title text-sf-blue;   }
+  .graffiti-orange  { @apply graffiti-title text-sf-orange; }
+
+  /* ============================================================
+     PERSONA 5 SHADOWS & CLIPS
+  ============================================================ */
+  .p5-shadow {
+    box-shadow: 6px 6px 0px #1A1815;
+  }
+  
+  .p5-shadow-hover:hover {
+    box-shadow: 8px 8px 0px #1A1815;
+    transform: translate(-2px, -2px);
+  }
+
+  .p5-clip {
+    clip-path: polygon(3% 0, 100% 0, 97% 100%, 0 100%);
+  }
+
+  /* ============================================================
+     CONCRETE CARD -> INK CONTAINER
+  ============================================================ */
+  .concrete-card {
+    @apply relative overflow-hidden;
+    /* Plus de bordures ni de radius pour casser l'aspect Web */
+    background: transparent;
+    border-bottom: 2px solid rgba(26,24,21,0.1);
+    border-left: 4px solid transparent;
+    padding: 1.5rem 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .concrete-card-hover:hover {
+    border-left-color: #9E2A2B;
+    background: rgba(26,24,21,0.02);
+    transform: translateX(4px);
+  }
+
+  /* Accent bar -> Remplacée par un coup de pinceau rouge/noir */
+  .card-accent-base {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: var(--tw-gradient-stops);
+    mask-image: url("data:image/svg+xml,%3Csvg preserveAspectRatio='none' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,50 Q25,20 50,50 T100,50 L100,100 L0,100 Z'/%3E%3C/svg%3E");
+    mask-size: 100% 100%;
+    opacity: 0.9;
+  }
+  .card-accent-yellow::before { @apply card-accent-base from-sf-yellow to-transparent bg-gradient-to-r; }
+  .card-accent-green::before  { @apply card-accent-base from-sf-green to-transparent bg-gradient-to-r; }
+  .card-accent-pink::before   { @apply card-accent-base from-sf-pink to-transparent bg-gradient-to-r; }
+  .card-accent-blue::before   { @apply card-accent-base from-sf-blue to-transparent bg-gradient-to-r; }
+  .card-accent-orange::before { @apply card-accent-base from-sf-orange to-transparent bg-gradient-to-r; }
+
+  /* ============================================================
+     BUTTONS -> SCEAUX MARTIAUX
+  ============================================================ */
+  .btn-sf {
+    @apply font-display tracking-widest uppercase inline-flex items-center justify-center gap-2;
+    position: relative;
+    border-radius: 2px;
+    transition: all 0.2s ease-out;
+  }
+
+  .btn-yellow {
+    @apply btn-sf px-8 py-3.5 text-[#F4EBE1] bg-sf-yellow;
+    box-shadow: 4px 4px 0 rgba(26,24,21,0.8);
+  }
+  .btn-yellow:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 rgba(26,24,21,0.8); }
+  .btn-yellow:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0 rgba(26,24,21,0.8); }
+
+  .btn-green {
+    @apply btn-sf px-8 py-3.5 text-[#F4EBE1] bg-sf-green;
+    box-shadow: 4px 4px 0 rgba(26,24,21,0.8);
+  }
+  .btn-green:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 rgba(26,24,21,0.8); }
+
+  .btn-outline {
+    @apply btn-sf px-8 py-3.5 text-chalk border-2 border-chalk;
+    background: transparent;
+  }
+  .btn-outline:hover {
+    background: #1A1815;
+    color: #F4EBE1;
+  }
+
+  /* ============================================================
+     TAGS & BADGES -> ESTAMPES
+  ============================================================ */
+  .tag {
+    @apply font-display text-xs tracking-widest uppercase px-3 py-1 inline-block border-2;
+    border-radius: 1px;
+    transform: rotate(-2deg);
+  }
+  .tag-yellow { @apply tag text-sf-yellow border-sf-yellow; }
+  .tag-green  { @apply tag text-sf-green border-sf-green; }
+  .tag-pink   { @apply tag text-sf-pink border-sf-pink; }
+  .tag-blue   { @apply tag text-sf-blue border-sf-blue; }
+  .tag-orange { @apply tag text-sf-orange border-sf-orange; }
+
+  /* ============================================================
+     SECTION DIVIDER -> COUP DE PINCEAU SUMI-E
+  ============================================================ */
+  .paint-divider {
+    height: 12px;
+    background: url("data:image/svg+xml,%3Csvg preserveAspectRatio='none' viewBox='0 0 200 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5,10 Q50,0 100,10 T195,10' fill='none' stroke='%239E2A2B' stroke-width='8' stroke-linecap='square' opacity='0.9'/%3E%3C/svg%3E") no-repeat;
+    background-size: 100% 100%;
+    max-width: 150px;
+    margin-top: 24px;
+  }
+  .paint-divider-full {
+    height: 20px;
+    background: url("data:image/svg+xml,%3Csvg preserveAspectRatio='none' viewBox='0 0 1000 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,10 Q250,-5 500,10 T1000,10' fill='none' stroke='%231A1815' stroke-width='6' stroke-dasharray='100 5' opacity='0.8'/%3E%3C/svg%3E") no-repeat center;
+    margin: 40px 0;
+  }
+
+  /* ============================================================
+     FRAME DATA
+  ============================================================ */
+  .frame-bar {
+    @apply relative h-full flex items-center justify-center font-display text-xs overflow-hidden border-r-2 border-[#F4EBE1];
+  }
+  .frame-bar-startup  { @apply frame-bar bg-frame-startup text-white; }
+  .frame-bar-active   { @apply frame-bar bg-frame-active text-white; }
+  .frame-bar-recovery { @apply frame-bar bg-frame-recovery text-white; }
+
+  .frame-number {
+    @apply absolute bottom-0 text-center font-body font-bold;
+    font-size: 8px;
+    color: rgba(255,255,255,0.9);
+    width: 100%;
+  }
+
+  /* ============================================================
+     NAV
+  ============================================================ */
+  .nav-link {
+    @apply font-display text-xs tracking-widest uppercase text-chalk-dim px-3 py-2 transition-all duration-200 border-b-2 border-transparent;
+  }
+  .nav-link:hover  { @apply text-sf-orange border-sf-orange; }
+  .nav-link.active { @apply text-sf-pink border-sf-pink; }
+
+  /* ============================================================
+     SLIDER INPUT
+  ============================================================ */
+  input[type='range'] {
+    -webkit-appearance: none; appearance: none;
+    height: 4px; background: transparent; cursor: pointer; width: 100%;
+  }
+  input[type='range']::-webkit-slider-runnable-track {
+    background: #1A1815;
+    height: 4px; border-radius: 0;
+  }
+  input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px; height: 32px;
+    background: #9E2A2B;
+    border: 2px solid #1A1815;
+    margin-top: -14px;
+    border-radius: 0;
+  }
+
+  /* ============================================================
+     VIDEO EMBED
+  ============================================================ */
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    background: #111;
+    border: 4px solid #1A1815;
+    box-shadow: 10px 10px 0 rgba(26,24,21,0.1);
+  }
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: 0;
+  }
+
+  /* ============================================================
+     HERO
+  ============================================================ */
+  .hero-bg {
+    background: transparent;
+  }
+
+  /* ============================================================
+     GRUNGE STROKE -> Trait de pinceau épais
+  ============================================================ */
+  .grunge-stroke {
+    display: inline-block;
+    position: relative;
+  }
+  .grunge-stroke::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; left: -10px; right: -10px;
+    height: 14px;
+    background: rgba(158,42,43,0.8);
+    transform: rotate(-1deg);
+    z-index: -1;
+  }
+
+  /* ============================================================
+     PAINT SPLASH (Aquarelle/Encre Street Fighter)
+  ============================================================ */
+  .paint-splash {
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+    filter: contrast(1.5) blur(2px) url('#ink-filter'); /* Filtre SVG fictif ou juste blur */
+    mix-blend-mode: color-burn; /* Donne un super effet d'encre sur le papier clair */
+  }
+
+  /* ============================================================
+     ZONE COLORS
+  ============================================================ */
+  .zone-danger { background: rgba(122,0,22,0.1); border-left: 4px solid #7A0016; }
+  .zone-safe   { background: rgba(40,89,67,0.1); border-left: 4px solid #285943; }
+
+  /* ============================================================
+     CHALK HIGHLIGHT -> Surlignage au pinceau
+  ============================================================ */
+  .chalk-yellow { background: rgba(166,124,0,0.3); padding: 0 4px; }
+  .chalk-green  { background: rgba(40,89,67,0.2);  padding: 0 4px; }
+  .chalk-pink   { background: rgba(158,42,43,0.2); padding: 0 4px; }
+}
+
+@layer utilities {
+  .text-stroke-yellow { -webkit-text-stroke: 2px #A67C00; color: transparent; }
+  .text-stroke-chalk  { -webkit-text-stroke: 1px rgba(26,24,21,0.2); color: transparent; }
+  .no-select { user-select: none; -webkit-user-select: none; }
+}

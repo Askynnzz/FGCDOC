@@ -1,0 +1,331 @@
+{
+  "terms": [
+    {
+      "id": "frame_data",
+      "term": "Frame Data",
+      "category": "Frame Data",
+      "difficulty": 2,
+      "shortDef": "La science des timings cachés : combien de frames dure chaque phase d'un coup, et ce que ça implique pour toi et ton adversaire.",
+      "definition": "Dans les jeux de combat tournant à 60 images par seconde, chaque coup se découpe en trois phases distinctes : le **Startup** (la mise en route), les **Active Frames** (la fenêtre de frappe effective), et la **Recovery** (le retour à la position neutre). La Frame Data, c'est l'ensemble des chiffres qui décrivent ces trois phases pour chaque coup du jeu.\n\nDeux valeurs sont particulièrement critiques en situation de jeu : **On Block** et **On Hit**. 'On Block' indique de combien de frames tu avances ou recules sur ton adversaire si ton coup est bloqué. Un coup à -8 signifie que l'adversaire dispose de 8 frames libres pour agir avant toi. Un coup à +2 signifie que c'est toi qui agis 2 frames en avance. 'On Hit' indique le même calcul quand le coup touche.\n\nConcrètement : si ton coup est à -8 on block et que l'adversaire a un jab à 5 frames, il peut te punir avec 3 frames de marge. Mais si tu finis à +2, un jab adverse à 5 frames arrivera 3 frames trop tard. Ce simple calcul régit des centaines de décisions par round.",
+      "howItWorks": [
+        "Un coup à **-6 on block** → l'adversaire a 6 frames de fenêtre pour te punir",
+        "Un coup à **+3 on block** → tu peux sortir un coup à 3f ou moins et toucher en premier",
+        "Le jeu tourne à **60 FPS** → 1 frame = 16.6 millisecondes, imperceptible à l'œil nu"
+      ],
+      "commonMistakes": "La plupart des débutants choisissent leurs coups au feeling, sans considérer la frame data.",
+      "videos": [],
+      "tags": [
+        "frame data",
+        "startup",
+        "active",
+        "recovery"
+      ],
+      "accentColor": "yellow"
+    },
+    {
+      "id": "shimmy",
+      "term": "Shimmy",
+      "category": "Espacement",
+      "difficulty": 3,
+      "shortDef": "Faire croire à l'adversaire qu'on va le choper en s'approchant, puis reculer au dernier moment pour le forcer à déchopper dans le vide, et le punir.",
+      "definition": "Le Shimmy consiste à tromper l'adversaire en lui faisant croire que vous allez le choper en marchant près de lui, puis, à la dernière seconde, à reculer hors de portée. L'adversaire tentera alors de 'Tech' (déchopper) dans le vent comme un idiot, et vous pourrez le matraquer avec une énorme punition.\n\nFaire un shimmy est plus facile dans les jeux avec une courte portée de chope (il est donc plus facile de reculer hors de portée) et dans les jeux sans 'crouch tech' (l'adversaire ne peut pas se défendre contre la chope tout en vous frappant pendant que vous reculez), ce qui en fait une stratégie très commune dans un jeu comme Street Fighter. C'est l'une des façons d'imposer un 50/50 très basique 'Chope ou pas chope' à quelqu'un, et vous verrez très souvent ce style d'appât à la chope.",
+      "howItWorks": [
+        "Marche vers l'adversaire pour menacer d'une chope",
+        "Recule subitement juste avant la portée de chope",
+        "L'adversaire tente une déchope dans le vide (Whiff)",
+        "Tu punis l'animation de sa chope ratée"
+      ],
+      "commonMistakes": "Faire un Shimmy avant d'avoir conditionné l'adversaire. Si l'adversaire n'a pas peur de votre chope, il ne tentera pas de déchopper.",
+      "videos": [],
+      "tags": [
+        "throw",
+        "bait",
+        "footsies",
+        "okizeme"
+      ],
+      "accentColor": "green"
+    },
+    {
+      "id": "whiff_punish",
+      "term": "Whiff Punish",
+      "category": "Fondamentaux",
+      "difficulty": 3,
+      "shortDef": "Un type de punition qui frappe un adversaire après qu'il a lancé une attaque dans le vide et qu'il est vulnérable (recovery).",
+      "definition": "Un type particulier de punition qui touchera un adversaire après qu'il a raté son attaque dans le vide (whiff) et qu'il est laissé vulnérable (recovering) à découvert.\n\nCertaines punitions de whiff sont possibles en réaction, si l'attaque adverse a beaucoup de recovery ou si vous avez une très bonne lecture (read) du moment où votre adversaire tentera d'attaquer. À d'autres moments, si vous vous tenez à une bonne distance et utilisez des pokes forts, vous pouvez punir des attaques rapides sans même avoir besoin de réagir.\n\nPunir les whiffs est un aspect du jeu de 'footsies' : marchez vers votre adversaire pour qu'il pense pouvoir attaquer sans risque, puis reculez et regardez-le frapper dans le vent avant de le punir.",
+      "howItWorks": [
+        "Place-toi à la limite de la portée adverse",
+        "L'adversaire lance une attaque qui rate (Whiff)",
+        "Pendant son animation de récupération, tu le frappes",
+        "Cela requiert du bon espacement (spacing) plutôt que des purs réflexes"
+      ],
+      "commonMistakes": "Essayer de réagir visuellement au lieu d'anticiper par l'espacement.",
+      "videos": [],
+      "tags": [
+        "neutral",
+        "spacing",
+        "punish",
+        "footsies"
+      ],
+      "accentColor": "blue"
+    },
+    {
+      "id": "meaty",
+      "term": "Meaty",
+      "category": "Okizeme",
+      "difficulty": 3,
+      "shortDef": "Une attaque qui touche l'adversaire sur sa toute première frame possible à la relevée, ou qui touche avec ses frames actives tardives.",
+      "definition": "Un terme avec deux définitions distinctes mais parfois superposées.\n\nLa définition la plus courante est une attaque qui frappe l'adversaire sur la toute première frame possible après qu'il se relève d'une mise à terre. Cela garantit que l'adversaire doit soit bloquer, soit utiliser immédiatement un coup invincible. S'il appuie sur n'importe quel bouton, il prendra un Counter Hit car son attaque doit passer par sa phase de startup, alors que votre attaque est déjà active sur lui. Apprendre à timer un meaty est extrêmement important, et vous pouvez souvent battre les débutants simplement en faisant des meaties en boucle.\n\nL'autre définition est une attaque qui touche l'adversaire non pas sur sa première frame active comme d'habitude, mais sur une frame active plus tardive. Cela génère le même stun, mais vous récupérez plus tôt et obtenez un plus grand avantage de frames (pouvant débloquer de nouveaux combos). Les deux vont de pair : quand on attaque quelqu'un à la relevée, on touche souvent avec des frames tardives !",
+      "howItWorks": [
+        "L'adversaire est au sol",
+        "Tu lances un coup calculé pour être 'actif' pile quand il se lève",
+        "S'il tape, il prend un Counter Hit garanti",
+        "Peut aussi signifier toucher avec les dernières frames actives du coup"
+      ],
+      "commonMistakes": "Faire son attaque trop tôt (le coup rate) ou trop tard (l'adversaire peut frapper en premier).",
+      "videos": [],
+      "tags": [
+        "okizeme",
+        "timing",
+        "frames",
+        "wakeup"
+      ],
+      "accentColor": "yellow"
+    },
+    {
+      "id": "okizeme",
+      "term": "Okizeme",
+      "category": "Fondamentaux",
+      "difficulty": 2,
+      "shortDef": "Le moment où votre adversaire est à terre et où vous pouvez l'attaquer pendant qu'il se relève (Wake up offense).",
+      "definition": "Le moment pendant un jeu de combat où votre adversaire est mis à terre et que vous avez l'opportunité de l'attaquer pendant qu'il se remet debout.\n\nLes options du défenseur étant limitées, le joueur offensif peut attaquer avec toutes sortes de mixups ou appliquer le jeu psychologique (mind game) de son choix. Les options incluent une attaque Meaty basique, faire un cross-up, ou tenter d'appâter le Dragon Punch désespéré de l'adversaire en ne faisant rien et en bloquant.\n\nOkizeme (souvent raccourci en 'Oki') signifie 'Offensive à la relevée' en japonais. Il se concentre sur les choix offensifs (contrairement au terme 'Wake up' qui se concentre sur la défense). Demander 'Est-ce que j'ai l'oki après ce coup ?' revient à demander si ce coup vous laisse assez près et avec assez de temps pour menacer l'adversaire de multiples façons.",
+      "howItWorks": [
+        "Tu mets l'adversaire au sol (Knockdown)",
+        "Tu t'approches pour maintenir l'avantage de la situation",
+        "Tu imposes ton jeu (Meaty, Chope, Shimmy, Cross-up)",
+        "Un coup sans 'Oki' est un coup qui te repousse trop loin"
+      ],
+      "commonMistakes": "Utiliser des combos qui font plus de dégâts mais qui ne laissent aucune possibilité d'Okizeme derrière.",
+      "videos": [],
+      "tags": [
+        "wakeup",
+        "mixup",
+        "avantage",
+        "mindgame"
+      ],
+      "accentColor": "pink"
+    },
+    {
+      "id": "option_select",
+      "term": "Option Select",
+      "category": "Technique",
+      "difficulty": 4,
+      "shortDef": "Une situation où effectuer les mêmes inputs conduit à des résultats différents selon l'interaction. Le jeu sélectionne la meilleure option automatiquement.",
+      "definition": "Une situation où effectuer exactement les mêmes inputs peut conduire à plusieurs résultats différents selon la façon dont les personnages interagissent. Souvent abrégé en 'OS'.\n\nUn OS commun est le Buffer : vous tapez un coup normal puis essayez de l'annuler en spécial. De loin, le normal frappe dans le vent et votre annulation ne fait rien. Mais si votre adversaire se fait toucher (ou bloque), l'annulation spéciale fonctionne automatiquement sans pensée supplémentaire.\n\nLa meilleure façon de concevoir les option selects est de les voir comme des 'inputs cachés'. Si vous essayez de faire quelque chose, mais que cela n'apparaît pas à l'écran (mais aurait pu si l'adversaire avait fait autre chose), vous avez fait une option select. Vous avez caché un résultat secondaire dans vos inputs qui ne s'activera que lorsqu'il vous est favorable. Les bonnes OS réduisent le besoin de parfaitement prédire ou réagir. Le jeu 'sélectionne' l'option pour vous.",
+      "howItWorks": [
+        "Tu effectues exactement la même séquence d'inputs",
+        "Tu y caches un résultat secondaire",
+        "Le jeu sélectionne automatiquement le résultat selon la situation",
+        "Exemples : Buffer, Delay Tech, Safe Jump, Fuzzy Guard"
+      ],
+      "commonMistakes": "Les Option Selects ne sont pas infaillibles : elles ont souvent un contre spécifique (ex: le Shimmy bat le Delay Tech).",
+      "videos": [],
+      "tags": [
+        "input",
+        "avancé",
+        "système",
+        "mécanique"
+      ],
+      "accentColor": "blue"
+    },
+    {
+      "id": "safe_jump",
+      "term": "Safe Jump",
+      "category": "Okizeme",
+      "difficulty": 4,
+      "shortDef": "Une attaque sautée si bien calculée à la relevée que si l'adversaire fait un Reversal invincible, vous atterrissez et bloquez à temps.",
+      "definition": "Une attaque sautée très bien chronométrée sur un personnage qui se relève d'une mise à terre. Votre but est d'attaquer très près du moment où vous atterrissez pour que, si le personnage effectue une attaque Reversal invincible, vous puissiez atterrir et bloquer.\n\nL'adversaire est alors forcé de bloquer votre attaque sautée, puisque son Reversal ne fonctionne pas, ce qui vous donne une bonne pression et une ouverture. Un Safe Jump est une Option Select : avec les mêmes inputs, vous pouvez à la fois attaquer l'adversaire ET bloquer s'il fait un reversal.\n\nCela repose sur votre récupération lors de l'atterrissage. Tant que vous avez moins de frames de récupération que le temps de démarrage (startup) du reversal de l'adversaire, vous avez le temps de bloquer au sol. C'est très dur à faire au hasard, c'est pourquoi les joueurs utilisent des 'setups' (séquences) pour que cela marche de manière constante.",
+      "howItWorks": [
+        "L'adversaire est à terre avec un Reversal chargé",
+        "Tu utilises un setup pour sauter avec un timing parfait",
+        "S'il ne fait rien : tu le touches / forces la garde (Meaty)",
+        "S'il fait un Reversal : tu atterris juste à temps pour le bloquer"
+      ],
+      "commonMistakes": "Tenter des Safe Jumps au feeling. Ils doivent être pratiqués avec des 'setups' fixes (ex: après tel combo, faire un dash puis un saut).",
+      "videos": [],
+      "tags": [
+        "saut",
+        "okizeme",
+        "option select",
+        "setup"
+      ],
+      "accentColor": "green"
+    },
+    {
+      "id": "reversal",
+      "term": "Reversal",
+      "category": "Défense",
+      "difficulty": 2,
+      "shortDef": "Une attaque lancée sur la toute première frame possible après avoir récupéré d'un état où l'on ne pouvait pas agir.",
+      "definition": "Une attaque qui est lancée sur la toute première frame possible après que votre personnage a récupéré d'un état où il n'était pas autorisé à attaquer, comme être mis à terre ou piégé dans un block stun. Si vous entrez un coup de cette manière, la plupart des jeux afficheront un message 'Reversal' pour indiquer que votre timing était correct.\n\nLes Reversals peuvent être n'importe quel coup, mais vous choisirez généralement un coup avec de l'invincibilité, comme un Dragon Punch, pour pouvoir éviter avec succès un adversaire qui essaie de vous attaquer. Si on demande si un personnage 'a un reversal', c'est pour savoir s'il a un coup invincible pour s'échapper de la pression.\n\nDans les jeux modernes, vous pouvez buffer le coup un peu avant, et le jeu l'appliquera comme un reversal. Vous n'avez pas à frapper cette unique frame parfaite.",
+      "howItWorks": [
+        "Tu es à terre ou en train de bloquer (incapable d'agir)",
+        "Tu entres ton coup juste avant d'être libéré",
+        "Le coup sort à la frame 1 de ta liberté",
+        "Un Reversal invincible bat toutes les attaques Meaty"
+      ],
+      "commonMistakes": "Abuser des Reversals invincibles. S'ils sont bloqués, c'est la pire punition possible.",
+      "videos": [],
+      "tags": [
+        "défense",
+        "wakeup",
+        "invincible",
+        "frame 1"
+      ],
+      "accentColor": "orange"
+    },
+    {
+      "id": "flowchart",
+      "term": "Flowchart",
+      "category": "Mental",
+      "difficulty": 1,
+      "shortDef": "Une stratégie basique et mécanique : si l'état du jeu est X, fais toujours Y.",
+      "definition": "Une stratégie basique qui peut être suivie par étapes : si l'état actuel du jeu est X, fais toujours Y.\n\n'Flowchart' (Organigramme) est généralement utilisé de manière péjorative pour désigner une personne qui ne réfléchit jamais et fait toujours la même chose (et perd généralement de la même manière à chaque fois).\n\nCependant, il y a une vraie valeur à suivre un flowchart basique quand on apprend un jeu. Cela peut réduire le fardeau de devoir tout apprendre d'un coup, et vous donne un plan de jeu significatif très rapidement.",
+      "howItWorks": [
+        "Un ensemble de règles pré-établies dans la tête du joueur",
+        "Si l'adversaire saute, je fais TOUJOURS Shoryuken",
+        "Si je suis bloqué, je fais TOUJOURS Drive Impact",
+        "S'il est bien construit, c'est redoutable à bas niveau"
+      ],
+      "commonMistakes": "Ne jamais dévier de son Flowchart. Contre un bon joueur, il comprendra vos règles en 10 secondes et exploitera vos habitudes.",
+      "videos": [],
+      "tags": [
+        "mental",
+        "stratégie",
+        "habitude",
+        "apprentissage"
+      ],
+      "accentColor": "yellow"
+    },
+    {
+      "id": "conditioning",
+      "term": "Conditioning",
+      "category": "Mental",
+      "difficulty": 4,
+      "shortDef": "Se comporter d'une certaine manière pendant un long moment, pour pouvoir agir de façon imprévisible à un moment crucial plus tard.",
+      "definition": "Se comporter d'une certaine manière sur une période de temps assez longue, afin de pouvoir agir de manière imprévisible lors d'un moment crucial plus tard.\n\nVous pouvez conditionner votre adversaire à, par exemple, s'attendre toujours à un certain style de pression ou à un schéma de lancer de boules de feu, et l'entraîner à penser qu'il a tout compris. Puis, quand le match est en jeu, vous le surprenez en changeant de comportement et en le piégeant dans sa vieille habitude.\n\nLe Conditionnement est lié à l'appât (baiting), mais à la manière d'une 'arnaque sur le long terme' (long con).",
+      "howItWorks": [
+        "Établis une routine (ex: chope 3 fois de suite à la relevée)",
+        "L'adversaire apprend cette routine (il va commencer à déchopper)",
+        "Au moment clé, brise la routine (fais un Shimmy)",
+        "Détruis-le car il a réagi à ton conditionnement"
+      ],
+      "commonMistakes": "Penser qu'on a conditionné un joueur qui ne fait pas attention. On ne peut conditionner que quelqu'un qui analyse vos actions.",
+      "videos": [],
+      "tags": [
+        "mental",
+        "mindgame",
+        "stratégie",
+        "bait"
+      ],
+      "accentColor": "pink"
+    },
+    {
+      "id": "drive_impact",
+      "term": "Drive Impact",
+      "category": "Mécanique SF6",
+      "difficulty": 1,
+      "shortDef": "Une attaque armurée à longue portée (HP+HK) qui coûte 1 barre de Drive et peut froisser l'adversaire ou l'écraser contre le mur.",
+      "definition": "Une attaque armurée à longue portée dans Street Fighter 6 qui s'effectue avec HP+HK et coûte 1 barre de Drive. Communément abrégé en 'DI'. Si le DI absorbe une attaque et frappe (ou en Punish Counter brut), il fera froisser (crumple) l'adversaire et donnera un combo complet.\n\nBloquer un DI au milieu de l'écran est correct, mais près du mur, le bloquer vous écrasera (Wall Splat), brisera votre garde et donnera un combo. Le DI devient un coup imblocable dans le coin. Si vous êtes en burnout, le Wall Splat vous étourdira (Stun).\n\nLes contres possibles : sauter, choper juste avant l'impact, faire un Parry, un Super. Surtout, si vous entrez votre propre DI dès que vous voyez le sien, le jeu passera au ralenti et votre DI absorbera le sien (la réponse préférée !).\n\nNote : si l'adversaire est déjà bloqué par une attaque précédente (vrai Blockstring), le DI ne peut pas Wall Splat. Le jeu affichera 'Lock' et repoussera l'adversaire.",
+      "howItWorks": [
+        "Absorbe jusqu'à 2 coups non-armor breaking",
+        "Donne un full combo si ça touche (ou si ça absorbe)",
+        "Écrase contre le mur même en garde (Wall Splat)",
+        "Le meilleur contre reste de faire son propre Drive Impact en réaction"
+      ],
+      "commonMistakes": "L'utiliser de façon trop prévisible. Les joueurs finissent par garder le doigt sur le bouton pour répondre à votre DI instantanément.",
+      "videos": [],
+      "tags": [
+        "SF6",
+        "armure",
+        "mécanique",
+        "corner"
+      ],
+      "accentColor": "orange"
+    },
+    {
+      "id": "buffer",
+      "term": "Buffer",
+      "category": "Technique",
+      "difficulty": 3,
+      "shortDef": "Peut désigner une fenêtre de temps pour entrer un coup, l'acte de cacher un coup derrière un normal (Whiff), ou répéter un mouvement rapidement.",
+      "definition": "Un terme qui n'a pas moins de trois significations distinctes et importantes dans les jeux de combat :\n\n1) Le Buffer peut faire référence à une fenêtre de temps où le jeu vous permet d'entrer un mouvement (Buffer Window).\n2) Le Buffer peut aussi faire référence à un personnage qui attaque dans le vide avec un coup normal, en espérant l'annuler en un autre attaque s'il touche (Buffered Attack, qui est une Option Select fondamentale).\n3) Enfin, le Buffer peut désigner le fait de répéter rapidement la motion d'un spécial ou d'un super pour pouvoir l'exécuter plus vite en réaction (Buffered Motion).\n\nC'est un peu malheureux que le même mot décrive trois concepts différents, mais le contexte aidera à savoir lequel s'applique !",
+      "howItWorks": [
+        "Action 1 : Le jeu se souvient de tes touches tapées un peu trop tôt",
+        "Action 2 : Cacher l'input d'un Hadoken derrière un coup de pied dans le vent",
+        "Action 3 : Faire des quarts de cercle dans le vide en attendant l'adversaire"
+      ],
+      "commonMistakes": "Ne pas abuser du Buffered Attack. Dans le neutre, il faut systématiquement cacher ses spéciaux derrière ses pokes rapides.",
+      "videos": [],
+      "tags": [
+        "input",
+        "technique",
+        "os",
+        "temps"
+      ],
+      "accentColor": "green"
+    },
+    {
+      "id": "fuzzy",
+      "term": "Fuzzy / Fuzzy Guard",
+      "category": "Défense",
+      "difficulty": 5,
+      "shortDef": "Tenter d'être dans deux états à la fois (bloquer plusieurs directions) en changeant sa garde de façon très précise.",
+      "definition": "Un terme un peu confus avec deux significations principales. Souvent, les gens essaient de bloquer deux directions (Haut/Bas, Gauche/Droite) presque en même temps : c'est le 'Fuzzy Guard'.\n\nExemple théorique : un personnage a une attaque Bas qui tape en 20 frames, et un Haut (Overhead) en 23 frames. Plutôt que de réagir (difficile), on bloque Bas pendant 20 frames, puis on passe Haut entre la frame 21 et 23. Si c'est réussi, on a bloqué les deux options sans avoir à réfléchir ! Ça demande un timing parfait, et si l'adversaire retarde son attaque (Delay), vous vous ferez écraser.\n\nGénéralement, le terme 'Fuzzy' s'emploie quand on essaie d'être dans deux états 'à la fois' (un juste milieu flou). Quand on parle de 'Fuzzy Backdash' ou 'Fuzzy Jump', cela désigne presque toujours : bloquer d'abord, puis faire cette action quelques frames plus tard (c'est donc une Option Select).",
+      "howItWorks": [
+        "Identifie un mixup avec des timings différents",
+        "Bloque la première option selon le timing",
+        "Change d'état juste au moment où la deuxième option devrait taper",
+        "Agit comme une Option Select basée sur le rythme"
+      ],
+      "commonMistakes": "Vouloir utiliser un Fuzzy Guard contre deux attaques qui sortent avec le même timing. C'est impossible (il faut deviner le 50/50).",
+      "videos": [],
+      "tags": [
+        "défense",
+        "timing",
+        "avancé",
+        "mixup"
+      ],
+      "accentColor": "pink"
+    }
+  ],
+  "categories": [
+    {
+      "id": "all",
+      "label": "Tous les termes"
+    },
+    {
+      "id": "fondamentaux",
+      "label": "Fondamentaux"
+    },
+    {
+      "id": "technique",
+      "label": "Technique"
+    },
+    {
+      "id": "defense",
+      "label": "Défense"
+    },
+    {
+      "id": "okizeme",
+      "label": "Okizeme"
+    },
+    {
+      "id": "mental",
+      "label": "Mental"
+    },
+    {
+      "id": "sf6",
+      "label": "Mécanique SF6"
+    }
+  ]
+}
